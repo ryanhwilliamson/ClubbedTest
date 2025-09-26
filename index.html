@@ -57,7 +57,7 @@
   function audioToAxis(val){
     const normalized = clamp(val / 255, 0, 1);
     // increase sensitivity by 50%
-    const shaped = Math.pow(normalized, 1 / 1.5);
+    const shaped = Math.pow(normalized, 1 / 4);
     return Math.round(AXIS_MIN + (AXIS_MAX - AXIS_MIN) * shaped);
   }
 
